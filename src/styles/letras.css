@@ -1,0 +1,20 @@
+.uno{
+  position: absolute;
+  width:100%;
+  left:0px;
+  font-size: 38px;
+  margin-top:50px;
+  color:white;
+  -webkit-text-stroke: 1px black;
+  font-family: fantasy;
+}
+.dos{
+ position: absolute;
+  width:100%;
+  left:0px;
+  font-size: 38px;
+  margin-top:600px;
+  -webkit-text-stroke: 1px black;
+  font-family: fantasy;
+  color:white;
+}
