@@ -1,0 +1,9 @@
+.titulo{
+    margin: 20px;
+    font-size: 25px;
+    font-family: fantasy;
+    background-color:rgb(218, 132, 82);
+    padding: 10px;
+    border:1px solid;
+    border-radius: 15px;
+}

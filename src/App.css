@@ -29,7 +29,6 @@
 }
 
 .imagen{
-  background: red;
   width: 700px;
   height : 700px;
   margin: auto;
@@ -42,4 +41,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+.boton{
+  background-color: #16c51c;
+  color: black;
+  border: 2px solid black; /* Green */
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  font-family: cursive;
+  font-size:15px;
+}
+.boton:hover{
+
+  background-color:rgb(218, 215, 215);
+}
+body{
+  background-color:rgb(209, 209, 90);
+}
+select{
+  padding:6px;
+  border-radius: 5px;
+  border: 0.5px solid;
 }
