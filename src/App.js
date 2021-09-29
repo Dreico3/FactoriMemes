@@ -1,4 +1,6 @@
 import React from 'react';
+// primero tienes q instalar el html2camvas y luego importalo
+import html2canvas from 'html2canvas';
 import './App.css';
 import './styles/letras.css'
 function App() {
@@ -39,12 +41,23 @@ function App() {
         value={inputs.liena2}
         name='linea2'
       /><br/>
-      <button>exportar</button>
-      <div>
+      <button onClick={e=>{
+        html2canvas(document.querySelector("#imagen")).then(canvas => {
+          //convertimos en este caso el div en una imagen
+          var img = canvas.toDataURL('image/png');
+          //luego creamos un link 
+          var zelda = document.createElement("a");
+          zelda.download = 'nombreDememe.png';
+          zelda.href=img;
+          setInputs({...inputs,linea1:'',linea2:''});
+          zelda.click();
+        });
+      }}>exportar</button>
+      <div id='imagen' className='imagen'>
+        <img src={`./images/${inputs.image}.jpg`} width='700' />
         <span className='uno'>{inputs.linea1}</span><br/>
         <span className='dos'>{inputs.linea2}</span><br/>
-        
-        <img src={`./images/${inputs.image}.jpg`} width='700' />
+      
       </div>
     </div>
   );
